@@ -28,7 +28,6 @@ var LibraryGLEmulation = {
     '$ptrToString', '$getEmscriptenSupportedExtensions',
   ],
   $GLEmulation__postset:
-#if MAYBE_CLOSURE_COMPILER
     // Forward declare GL functions that are overridden by GLEmulation here to appease Closure compiler.
     '/**@suppress {duplicate, undefinedVars}*/var _emscripten_glDrawArrays;' +
     '/**@suppress {duplicate, undefinedVars}*/var _emscripten_glDrawElements;' +
@@ -62,7 +61,6 @@ var LibraryGLEmulation = {
     '/**@suppress {duplicate, undefinedVars}*/var _glTexEnvfv;' +
     '/**@suppress {duplicate, undefinedVars}*/var _glGetTexEnviv;' +
     '/**@suppress {duplicate, undefinedVars}*/var _glGetTexEnvfv;' +
-#endif
     'GLEmulation.init();',
   $GLEmulation: {
     // Fog support. Partial, we assume shaders are used that implement fog. We just pass them uniforms
